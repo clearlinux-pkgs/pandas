@@ -49,3 +49,4 @@ python3 -tt setup.py build -b py3 install --root=%{buildroot}
 %files python
 %defattr(-,root,root,-)
 /usr/lib/python*/*
+
