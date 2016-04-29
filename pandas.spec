@@ -4,7 +4,7 @@
 #
 Name     : pandas
 Version  : 0.18.0
-Release  : 14
+Release  : 15
 URL      : https://pypi.python.org/packages/source/p/pandas/pandas-0.18.0.tar.gz
 Source0  : https://pypi.python.org/packages/source/p/pandas/pandas-0.18.0.tar.gz
 Summary  : Powerful data structures for data analysis, time series,and statistics
