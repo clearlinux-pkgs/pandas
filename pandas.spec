@@ -4,7 +4,7 @@
 #
 Name     : pandas
 Version  : 0.19.2
-Release  : 30
+Release  : 31
 URL      : http://pypi.debian.net/pandas/pandas-0.19.2.tar.gz
 Source0  : http://pypi.debian.net/pandas/pandas-0.19.2.tar.gz
 Summary  : Powerful data structures for data analysis, time series,and statistics
