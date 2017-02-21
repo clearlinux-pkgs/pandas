@@ -4,18 +4,20 @@
 #
 Name     : pandas
 Version  : 0.19.2
-Release  : 32
+Release  : 33
 URL      : http://pypi.debian.net/pandas/pandas-0.19.2.tar.gz
 Source0  : http://pypi.debian.net/pandas/pandas-0.19.2.tar.gz
 Summary  : Powerful data structures for data analysis, time series,and statistics
 Group    : Development/Tools
 License  : BSD-2-Clause BSD-3-Clause BSD-3-Clause-Clear
 Requires: pandas-python
-BuildRequires : numpy-python
+BuildRequires : numpy
 BuildRequires : pbr
 BuildRequires : pip
+BuildRequires : python-dateutil
 BuildRequires : python-dev
 BuildRequires : python3-dev
+BuildRequires : pytz
 BuildRequires : setuptools
 
 %description
@@ -26,6 +28,9 @@ Contributing to the documentation
 %package python
 Summary: python components for the pandas package.
 Group: Default
+Requires: numpy
+Requires: python-dateutil
+Requires: pytz
 
 %description python
 python components for the pandas package.
@@ -36,12 +41,12 @@ python components for the pandas package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1487697226
+export SOURCE_DATE_EPOCH=1487698261
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1487697226
+export SOURCE_DATE_EPOCH=1487698261
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
