@@ -4,12 +4,13 @@
 #
 Name     : pandas
 Version  : 0.20.3
-Release  : 39
+Release  : 40
 URL      : http://pypi.debian.net/pandas/pandas-0.20.3.tar.gz
 Source0  : http://pypi.debian.net/pandas/pandas-0.20.3.tar.gz
 Summary  : Powerful data structures for data analysis, time series,and statistics
 Group    : Development/Tools
 License  : BSD-2-Clause BSD-3-Clause BSD-3-Clause-Clear
+Requires: pandas-legacypython
 Requires: pandas-python
 BuildRequires : numpy
 BuildRequires : pbr
@@ -21,13 +22,27 @@ BuildRequires : pytz
 BuildRequires : setuptools
 
 %description
-.. _contributing.docs:
-Contributing to the documentation
-=================================
+**pandas** is a Python package providing fast, flexible, and expressive data
+        structures designed to make working with structured (tabular, multidimensional,
+        potentially heterogeneous) and time series data both easy and intuitive. It
+        aims to be the fundamental high-level building block for doing practical,
+        **real world** data analysis in Python. Additionally, it has the broader goal
+        of becoming **the most powerful and flexible open source data analysis /
+        manipulation tool available in any language**. It is already well on its way
+        toward this goal.
+
+%package legacypython
+Summary: legacypython components for the pandas package.
+Group: Default
+
+%description legacypython
+legacypython components for the pandas package.
+
 
 %package python
 Summary: python components for the pandas package.
 Group: Default
+Requires: pandas-legacypython
 
 %description python
 python components for the pandas package.
@@ -41,12 +56,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1499528005
+export SOURCE_DATE_EPOCH=1505010781
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1499528005
+export SOURCE_DATE_EPOCH=1505010781
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
@@ -57,7 +72,10 @@ echo ----[ mark ]----
 %files
 %defattr(-,root,root,-)
 
-%files python
+%files legacypython
 %defattr(-,root,root,-)
 /usr/lib/python2*/*
+
+%files python
+%defattr(-,root,root,-)
 /usr/lib/python3*/*
