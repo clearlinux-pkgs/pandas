@@ -4,7 +4,7 @@
 #
 Name     : pandas
 Version  : 0.21.1
-Release  : 43
+Release  : 44
 URL      : http://pypi.debian.net/pandas/pandas-0.21.1.tar.gz
 Source0  : http://pypi.debian.net/pandas/pandas-0.21.1.tar.gz
 Summary  : Powerful data structures for data analysis, time series,and statistics
