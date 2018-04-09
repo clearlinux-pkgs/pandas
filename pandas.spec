@@ -4,13 +4,12 @@
 #
 Name     : pandas
 Version  : 0.22.0
-Release  : 47
+Release  : 48
 URL      : http://pypi.debian.net/pandas/pandas-0.22.0.tar.gz
 Source0  : http://pypi.debian.net/pandas/pandas-0.22.0.tar.gz
 Summary  : Powerful data structures for data analysis, time series,and statistics
 Group    : Development/Tools
 License  : BSD-2-Clause BSD-3-Clause
-Requires: pandas-legacypython
 Requires: pandas-python3
 Requires: pandas-python
 BuildRequires : numpy
@@ -32,19 +31,9 @@ BuildRequires : setuptools
         manipulation tool available in any language**. It is already well on its way
         toward this goal.
 
-%package legacypython
-Summary: legacypython components for the pandas package.
-Group: Default
-Requires: python-core
-
-%description legacypython
-legacypython components for the pandas package.
-
-
 %package python
 Summary: python components for the pandas package.
 Group: Default
-Requires: pandas-legacypython
 Requires: pandas-python3
 
 %description python
@@ -68,25 +57,18 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1514824270
-python2 setup.py build -b py2
+export SOURCE_DATE_EPOCH=1523295735
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1514824270
 rm -rf %{buildroot}
-python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
-python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
+python3 -tt setup.py build -b py3 install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
 
 %files
 %defattr(-,root,root,-)
-
-%files legacypython
-%defattr(-,root,root,-)
-/usr/lib/python2*/*
 
 %files python
 %defattr(-,root,root,-)
