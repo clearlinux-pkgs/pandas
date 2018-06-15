@@ -19,7 +19,7 @@ BuildRequires : numpy
 BuildRequires : pbr
 BuildRequires : pip
 BuildRequires : python-dateutil
-BuildRequires : python-dev
+
 BuildRequires : python3-dev
 BuildRequires : pytz
 BuildRequires : setuptools
