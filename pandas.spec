@@ -4,7 +4,7 @@
 #
 Name     : pandas
 Version  : 0.23.1
-Release  : 56
+Release  : 57
 URL      : https://github.com/pandas-dev/pandas/releases/download/v0.23.1/pandas-0.23.1.tar.gz
 Source0  : https://github.com/pandas-dev/pandas/releases/download/v0.23.1/pandas-0.23.1.tar.gz
 Summary  : Powerful data structures for data analysis, time series, and statistics
