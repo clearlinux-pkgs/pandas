@@ -4,7 +4,7 @@
 #
 Name     : pandas
 Version  : 0.24.2
-Release  : 66
+Release  : 67
 URL      : https://github.com/pandas-dev/pandas/releases/download/v0.24.2/pandas-0.24.2.tar.gz
 Source0  : https://github.com/pandas-dev/pandas/releases/download/v0.24.2/pandas-0.24.2.tar.gz
 Summary  : Powerful data structures for data analysis, time series, and statistics
