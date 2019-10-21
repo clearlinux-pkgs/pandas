@@ -1,2 +1,8 @@
 # This file contains recursive sources that require this package
+Keras_Preprocessing
+conda
+dask
+hypothesis
+networkx
+partd
 statsmodels
