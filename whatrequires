@@ -1,8 +1,11 @@
 # This file contains recursive sources that require this package
+Keras
 Keras_Preprocessing
 conda
 dask
 hypothesis
 networkx
 partd
+scikit-learn
+seaborn
 statsmodels
