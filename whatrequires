@@ -9,5 +9,3 @@ partd
 scikit-learn
 seaborn
 statsmodels
-subunit2sql
-xgboost
