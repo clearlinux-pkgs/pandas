@@ -4,7 +4,7 @@
 #
 Name     : pandas
 Version  : 1.1.5
-Release  : 89
+Release  : 90
 URL      : https://github.com/pandas-dev/pandas/releases/download/v1.1.5/pandas-1.1.5.tar.gz
 Source0  : https://github.com/pandas-dev/pandas/releases/download/v1.1.5/pandas-1.1.5.tar.gz
 Summary  : Powerful data structures for data analysis, time series, and statistics
