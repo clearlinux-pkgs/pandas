@@ -1,5 +1,5 @@
 PKG_NAME := pandas
-URL = https://github.com/pandas-dev/pandas/releases/download/v1.2.4/pandas-1.2.4.tar.gz
+URL = https://github.com/pandas-dev/pandas/releases/download/v1.2.5/pandas-1.2.5.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
