@@ -6,7 +6,6 @@ dask
 hypothesis
 networkx
 partd
-petastorm
 scikit-learn
 seaborn
 statsmodels
