@@ -1,2 +1,4 @@
-1.3.4
+1.3.5
+pypi(python_dateutil)
+pypi(pytz)
 python3-dev
