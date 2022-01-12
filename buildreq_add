@@ -1,6 +1,6 @@
 # This file contains additional build requirements that did not get
 # picked up automatically. One name per line, no whitespace.
-numpy
-pytz
-python-dateutil
-Cython
+pypi(numpy)
+pypi(pytz)
+pypi(python_dateutil)
+pypi-cython

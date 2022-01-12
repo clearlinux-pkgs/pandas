@@ -4,7 +4,7 @@
 #
 Name     : pandas
 Version  : 1.3.5
-Release  : 113
+Release  : 114
 URL      : https://github.com/pandas-dev/pandas/releases/download/v1.3.5/pandas-1.3.5.tar.gz
 Source0  : https://github.com/pandas-dev/pandas/releases/download/v1.3.5/pandas-1.3.5.tar.gz
 Summary  : Powerful data structures for data analysis, time series, and statistics
@@ -13,18 +13,16 @@ License  : Apache-2.0 BSD-3-Clause MIT Python-2.0
 Requires: pandas-license = %{version}-%{release}
 Requires: pandas-python = %{version}-%{release}
 Requires: pandas-python3 = %{version}-%{release}
-BuildRequires : Cython
 BuildRequires : buildreq-distutils3
-BuildRequires : numpy
 BuildRequires : pypi(cython)
+BuildRequires : pypi(numpy)
 BuildRequires : pypi(oldest_supported_numpy)
 BuildRequires : pypi(python_dateutil)
 BuildRequires : pypi(pytz)
 BuildRequires : pypi(setuptools)
 BuildRequires : pypi(wheel)
-BuildRequires : python-dateutil
+BuildRequires : pypi-cython
 BuildRequires : python3-dev
-BuildRequires : pytz
 
 %description
 <div align="center">
@@ -70,7 +68,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1639420205
+export SOURCE_DATE_EPOCH=1641947434
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "

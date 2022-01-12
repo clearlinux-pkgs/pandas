@@ -1,6 +1,1 @@
 # This file contains recursive sources that require this package
-networkx
-partd
-scikit-learn
-seaborn
-statsmodels
