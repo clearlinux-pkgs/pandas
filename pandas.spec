@@ -4,7 +4,7 @@
 #
 Name     : pandas
 Version  : 1.4.0
-Release  : 115
+Release  : 116
 URL      : https://github.com/pandas-dev/pandas/releases/download/v1.4.0/pandas-1.4.0.tar.gz
 Source0  : https://github.com/pandas-dev/pandas/releases/download/v1.4.0/pandas-1.4.0.tar.gz
 Summary  : Powerful data structures for data analysis, time series, and statistics
@@ -16,7 +16,6 @@ Requires: pandas-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
 BuildRequires : pypi(cython)
 BuildRequires : pypi(numpy)
-BuildRequires : pypi(oldest_supported_numpy)
 BuildRequires : pypi(python_dateutil)
 BuildRequires : pypi(pytz)
 BuildRequires : pypi(setuptools)
@@ -68,7 +67,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1643040936
+export SOURCE_DATE_EPOCH=1644357103
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
