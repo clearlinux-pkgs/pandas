@@ -4,7 +4,7 @@
 #
 Name     : pandas
 Version  : 1.4.3
-Release  : 122
+Release  : 123
 URL      : https://github.com/pandas-dev/pandas/releases/download/v1.4.3/pandas-1.4.3.tar.gz
 Source0  : https://github.com/pandas-dev/pandas/releases/download/v1.4.3/pandas-1.4.3.tar.gz
 Summary  : Powerful data structures for data analysis, time series, and statistics
