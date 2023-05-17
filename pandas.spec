@@ -5,22 +5,23 @@
 #
 Name     : pandas
 Version  : 2.0.1
-Release  : 132
+Release  : 133
 URL      : https://github.com/pandas-dev/pandas/releases/download/v2.0.1/pandas-2.0.1.tar.gz
 Source0  : https://github.com/pandas-dev/pandas/releases/download/v2.0.1/pandas-2.0.1.tar.gz
 Summary  : Powerful data structures for data analysis, time series, and statistics
 Group    : Development/Tools
 License  : Apache-2.0 BSD-3-Clause MIT Python-2.0
-Requires: pandas-filemap = %{version}-%{release}
-Requires: pandas-lib = %{version}-%{release}
 Requires: pandas-license = %{version}-%{release}
 Requires: pandas-python = %{version}-%{release}
 Requires: pandas-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
+BuildRequires : pypi(cython)
 BuildRequires : pypi(numpy)
 BuildRequires : pypi(python_dateutil)
 BuildRequires : pypi(pytz)
+BuildRequires : pypi(setuptools)
 BuildRequires : pypi(versioneer)
+BuildRequires : pypi(wheel)
 BuildRequires : pypi-cython
 # Suppress stripping binaries
 %define __strip /bin/true
@@ -30,24 +31,6 @@ BuildRequires : pypi-cython
 <div align="center">
 <img src="https://pandas.pydata.org/static/img/pandas.svg"><br>
 </div>
-
-%package filemap
-Summary: filemap components for the pandas package.
-Group: Default
-
-%description filemap
-filemap components for the pandas package.
-
-
-%package lib
-Summary: lib components for the pandas package.
-Group: Libraries
-Requires: pandas-license = %{version}-%{release}
-Requires: pandas-filemap = %{version}-%{release}
-
-%description lib
-lib components for the pandas package.
-
 
 %package license
 Summary: license components for the pandas package.
@@ -69,7 +52,6 @@ python components for the pandas package.
 %package python3
 Summary: python3 components for the pandas package.
 Group: Default
-Requires: pandas-filemap = %{version}-%{release}
 Requires: python3-core
 Provides: pypi(pandas)
 Requires: pypi(numpy)
@@ -93,12 +75,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1682349253
+export SOURCE_DATE_EPOCH=1684337777
 export GCC_IGNORE_WERROR=1
-export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
-export CXXFLAGS="$CXXFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export CXXFLAGS="$CXXFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 -m build --wheel --skip-dependency-check --no-isolation
 pushd ../buildavx2/
@@ -145,14 +127,6 @@ popd
 %files
 %defattr(-,root,root,-)
 
-%files filemap
-%defattr(-,root,root,-)
-/usr/share/clear/filemap/filemap-pandas
-
-%files lib
-%defattr(-,root,root,-)
-/usr/share/clear/optimized-elf/other*
-
 %files license
 %defattr(0644,root,root,0755)
 /usr/share/package-licenses/pandas/0b03c4c50445a681f27c7f3352cb7f2ce3c2981e
@@ -174,4 +148,5 @@ popd
 
 %files python3
 %defattr(-,root,root,-)
+/V3/usr/lib/python3*/*
 /usr/lib/python3*/*
