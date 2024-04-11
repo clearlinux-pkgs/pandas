@@ -4,3 +4,4 @@ pypi(numpy)
 pypi(pytz)
 pypi(python_dateutil)
 pypi-cython
+meson
