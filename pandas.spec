@@ -6,10 +6,10 @@
 # autospec commit: 65cf152
 #
 Name     : pandas
-Version  : 2.3.0
-Release  : 142
-URL      : https://github.com/pandas-dev/pandas/releases/download/v2.3.0/pandas-2.3.0.tar.gz
-Source0  : https://github.com/pandas-dev/pandas/releases/download/v2.3.0/pandas-2.3.0.tar.gz
+Version  : 2.3.1
+Release  : 143
+URL      : https://github.com/pandas-dev/pandas/releases/download/v2.3.1/pandas-2.3.1.tar.gz
+Source0  : https://github.com/pandas-dev/pandas/releases/download/v2.3.1/pandas-2.3.1.tar.gz
 Summary  : Powerful data structures for data analysis, time series, and statistics
 Group    : Development/Tools
 License  : Apache-2.0 BSD-3-Clause MIT Python-2.0
@@ -67,10 +67,10 @@ python3 components for the pandas package.
 
 
 %prep
-%setup -q -n pandas-2.3.0
-cd %{_builddir}/pandas-2.3.0
+%setup -q -n pandas-2.3.1
+cd %{_builddir}/pandas-2.3.1
 pushd ..
-cp -a pandas-2.3.0 buildavx2
+cp -a pandas-2.3.1 buildavx2
 popd
 
 %build
@@ -78,7 +78,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1749136476
+export SOURCE_DATE_EPOCH=1752003943
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 CLEAR_INTERMEDIATE_FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
